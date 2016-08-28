@@ -1,6 +1,6 @@
 var React = require('react');
 var Stream = require('./Stream.react');
-// var Collection = require('./Collection.react');
+var Collection = require('./Collection.react');
 
 var Application = React.createClass({
     getInitialState: function() {
@@ -28,6 +28,7 @@ var Application = React.createClass({
     },
 
     removeAllTweetsFromCollection: function() {
+        console.log('remove all!!!');
         this.setState({
             collectionTweets: {}
         })
@@ -40,11 +41,11 @@ var Application = React.createClass({
             		<div className="col-md-4 text-center">
             			<Stream onAddTweetToCollection={this.addTweetToCollection}/>
             		</div>
-            		{/*<div className="col-md-8">
+            		<div className="col-md-8">
             			<Collection tweets={this.state.collectionTweets}
             			onRemoveTweetFromCollection={this.removeTweetFromCollection}
-            			onRemoveAllTweetFromCollection={this.removeAllTweetsFromCollection} />
-            		</div>*/}
+            			onRemoveAllTweetsFromCollection={this.removeAllTweetsFromCollection} />
+            		</div>
             	</div>
             </div>
         );
