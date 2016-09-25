@@ -49,8 +49,6 @@ var Tweet = React.createClass({
         var tweet = this.props.tweet;
         var tweetMediaUrl = tweet.media[0].url;
         var text = tweet.text;
-        console.log(text);
-        console.log(tweetMediaUrl);
         return (
             <div style={tweetStyle}>
             	<img src={tweetMediaUrl} onClick={this.handleImageClick}
