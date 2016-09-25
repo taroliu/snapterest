@@ -11,7 +11,12 @@ var Stream = React.createClass({
     },
 
     componentDidMount: function() {
-        SnapkiteStreamClient.initializeStream(this.handleNewTweet);
+        SnapkiteStreamClient.initializeStream(this.handleNewTweet, {
+            hostname: '192.168.1.105',
+            port: 3000,
+            delayInMilliseconds: 1500,
+            cacheNumberOfTweets: 20
+        });
     },
 
     componentWillUnmount: function() {
@@ -27,14 +32,13 @@ var Stream = React.createClass({
     render: function() {
         var tweet = this.state.tweet;
         if (tweet) {
-            return (
-                <StreamTweet tweet={tweet} onAddTweetToCollection={this.props.onAddTweetToCollection}/>
+            return ( < StreamTweet tweet = { tweet }
+                onAddTweetToCollection = { this.props.onAddTweetToCollection }
+                />
             );
         }
 
-        return (
-            <Header text="Waiting for public photos from Twitter..." />
-        );
+        return ( < Header text = "Waiting for public photos from Twitter..." / > );
     }
 
 });
