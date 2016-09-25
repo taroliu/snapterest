@@ -17,7 +17,7 @@ var Header = React.createClass({
     render: function() {
         return (
             <h2 style={headerStyle}>{this.props.text}</h2>
-        );
+            );
     }
 
 });
