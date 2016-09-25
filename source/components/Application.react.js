@@ -35,19 +35,15 @@ var Application = React.createClass({
     },
 
     render: function() {
-        return (
-            <div className="container-fluid">
-            	<div className="row">
-            		<div className="col-md-4 text-center">
-            			<Stream onAddTweetToCollection={this.addTweetToCollection}/>
-            		</div>
-            		<div className="col-md-8">
-            			<Collection tweets={this.state.collectionTweets}
-            			onRemoveTweetFromCollection={this.removeTweetFromCollection}
-            			onRemoveAllTweetsFromCollection={this.removeAllTweetsFromCollection} />
-            		</div>
-            	</div>
-            </div>
+        return ( < div className = "container-fluid" >
+            < div className = "row" >
+            < div className = "col-md-4 text-center" >
+            < Stream onAddTweetToCollection = { this.addTweetToCollection }
+            /> < /div> < div className = "col-md-8" >
+            < Collection tweets = { this.state.collectionTweets }
+            onRemoveTweetFromCollection = { this.removeTweetFromCollection }
+            onRemoveAllTweetsFromCollection = { this.removeAllTweetsFromCollection }
+            /> < /div> < /div> < /div>
         );
     }
 

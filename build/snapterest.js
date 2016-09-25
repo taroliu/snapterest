@@ -26125,16 +26125,23 @@ var Application = React.createClass({
                 React.createElement(
                     'div',
                     { className: 'col-md-4 text-center' },
-                    React.createElement(Stream, { onAddTweetToCollection: this.addTweetToCollection })
+                    React.createElement(Stream, { onAddTweetToCollection: this.addTweetToCollection
+                    }),
+                    ' '
                 ),
+                ' ',
                 React.createElement(
                     'div',
                     { className: 'col-md-8' },
                     React.createElement(Collection, { tweets: this.state.collectionTweets,
                         onRemoveTweetFromCollection: this.removeTweetFromCollection,
-                        onRemoveAllTweetsFromCollection: this.removeAllTweetsFromCollection })
-                )
-            )
+                        onRemoveAllTweetsFromCollection: this.removeAllTweetsFromCollection
+                    }),
+                    ' '
+                ),
+                ' '
+            ),
+            ' '
         );
     }
 
